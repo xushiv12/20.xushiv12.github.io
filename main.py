@@ -35,4 +35,5 @@ def a1():
                 return xu1
     return "我们好像没有发现您的域名。"
 if __name__=='__main__':
-    app.run(host="localhost",port=1025)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0",port=port)
